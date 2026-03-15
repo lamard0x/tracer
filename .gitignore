@@ -1,44 +1,48 @@
-# Dependencies
-node_modules/
-.pnpm-store/
-
-# Environment
+# Environment & secrets
 .env
 .env.local
-.env.*.local
+.env.production
 
-# Build
+# Telethon sessions (contains auth keys — NEVER commit)
+*.session
+*.session-journal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
 dist/
 build/
-out/
+.venv/
+venv/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Data files (runtime generated)
+data/
+
+# Test scripts (dev only)
+test_*.py
 
 # OS
 .DS_Store
 Thumbs.db
 
+# IDE
+.vscode/
+.idea/
+
 # Logs
 *.log
-npm-debug.log*
 
-# Cache
-.cache/
-.turbo/
+# Tools — API keys (runtime generated)
+tools/helius_keys.json
+tools/moralis_keys.json
+tools/*.json
+tools/*.png
+tools/.dune_chrome_profile/
 
-# Testing
-coverage/
+# Database
+*.db
 
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# Sessions
-*.session
-*.session-journal
+# Misc
+nul
